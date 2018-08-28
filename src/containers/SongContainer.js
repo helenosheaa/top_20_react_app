@@ -16,7 +16,7 @@ class SongContainer extends Component {
         return res.json();
       })
       .then((songs) => {
-        this.setState({ songs: songs })
+        this.setState({ songs: songs.feed.entry })
       });
   }
 
@@ -29,3 +29,5 @@ class SongContainer extends Component {
     );
   }
 }
+
+export default SongContainer;
